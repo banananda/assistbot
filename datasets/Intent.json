@@ -60,6 +60,32 @@
                   ]
             },
             {
+                  "tag": "howToRegister",
+                  "patterns": [
+                        "Saya ingin daftar akun",
+                        "Bagaimana cara daftar akun",
+                        "Bagaimana cara register",
+                        "Apa yang saya perlukan untuk mendaftar",
+                        "Apa syarat"
+                  ],
+                  "responses": [
+                        "Anda dapat merubah email Anda dengan membuka halaman pengaturan akun, lalu buka bagian biodata diri, lalu tekan tombol ubah email."
+                  ]
+            },
+            {
+                  "tag": "can't login",
+                  "patterns": [
+                        "gabisa login",
+                        "login error",
+                        "halaman login ga jalan"
+                  ],
+                  "responses": [
+                        "Halo, silahkan menunggu beberapa saat lagi untuk melakukan login",
+                        "Pastikan email sama password kamu udah benar ya :) ",
+                        "Silahkan cek kembali email dan passwordnya ya."
+                  ]
+            },
+            {
                   "tag": "Payment COD",
                   "patterns": [
                         "COD",
@@ -92,7 +118,7 @@
                         "Mandiri va"
                   ],
                   "responses": [
-                        "Kamu dapat melakukan pembayaran dengan menggunakan Mandiri Virtual Account dengan mengikuti langkah - langkah berikut: Pembayaran Mandiri Virtual Account dengan ATM bank Mandiri 1. Masukkan kartu ATM dan Pin. 2. Pilih Menu Bayar/Beli. 3. Pilih menu Lainnya, hingga menemukan menu Multipayment. 4. Masukkan kode biller Tokopedia 88708, lalu pilih Benar. 5. Masukkan Nomor Virtual Account Tokopedia, lalu pilih tombol Benar. 6. Masukkan Angka 1 untuk memilih tagihan, lalu pilih tombol Ya. 7. Akan muncul konfirmasi pembayaran, lalu pilih tombol Ya. 8. Simpan struk sebagai bukti pembayaran Anda."
+                        "Kamu dapat melakukan pembayaran dengan menggunakan Mandiri Virtual Account dengan mengikuti langkah - langkah berikut:\n\nPembayaran Mandiri Virtual Account dengan ATM bank Mandiri\n\n1. Masukkan kartu ATM dan Pin.\n2. Pilih Menu Bayar/Beli.\n3. Pilih menu Lainnya, hingga menemukan menu Multipayment.\n4. Masukkan kode biller Tokopedia 88708, lalu pilih Benar.\n5. Masukkan Nomor Virtual Account Tokopedia, lalu pilih tombol Benar.\n 6. Masukkan Angka 1 untuk memilih tagihan, lalu pilih tombol Ya.\n7. Akan muncul konfirmasi pembayaran, lalu pilih tombol Ya.\n8. Simpan struk sebagai bukti pembayaran Anda."
                   ]
             },
             {
@@ -104,7 +130,7 @@
                         "Bni va"
                   ],
                   "responses": [
-                        "Anda dapat melakukan pembayaran dengan metode pembayaran BNI Virtual Account dengan mengikuti langkah - langkah berikut : Pembayaran BNI Virtual Account dengan ATM BNI :1. Masukkan Kartu Anda.2. Pilih Bahasa.3. Masukkan PIN ATM Anda.4. Kemudian, pilih Menu Lainnya.5. Pilih Transfer dan pilih Jenis rekening yang akan Anda gunakan (Contoh: 6. Dari Rekening Tabungan).7. Pilih Virtual Account Billing. Masukkan nomor Virtual Account Anda (Contoh: 8277087781881441).8. Tagihan yang harus dibayarkan akan muncul pada layar konfirmasi.9. Konfirmasi, apabila telah sesuai, lanjutkan transaksi.10. Transaksi Anda telah selesai."
+                        "Anda dapat melakukan pembayaran dengan metode pembayaran BNI Virtual Account dengan mengikuti langkah - langkah berikut :\n\nPembayaran BNI Virtual Account dengan ATM BNI :\n\n1. Masukkan Kartu Anda.\n2. Pilih Bahasa.\n3. Masukkan PIN ATM Anda.\n4. Kemudian, pilih Menu Lainnya.\n5. Pilih Transfer dan pilih Jenis rekening yang akan Anda gunakan (Contoh: 6. Dari Rekening Tabungan).\n7. Pilih Virtual Account Billing. Masukkan nomor Virtual Account Anda (Contoh: 8277087781881441).\n8. Tagihan yang harus dibayarkan akan muncul pada layar konfirmasi.\n9. Konfirmasi, apabila telah sesuai, lanjutkan transaksi.\n10. Transaksi Anda telah selesai."
                   ]
             }
       ]
