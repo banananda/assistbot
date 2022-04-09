@@ -79,7 +79,9 @@
                         "Cara membayar ?",
                         "Cara bayar ?"
                   ],
-                  "responses": "GoPay, Saldo Tokopedia, GoPayLater, OVO, Virtual Account, Transfer Bank, BRI Ceria, BCA KlikPay, Mandiri Clickpay, LinkAja, BRImo, Jenius Pay, Cicilan/Kartu Kredit, Gerai, JakOne Mobile, Cicilan tanpa kartu kredit, Kredivo, Indodana, Home Credit, COD (cash on delivery)"
+                  "responses": [
+                        "GoPay\nSaldo Tokopedia\nGoPayLater\nOVO\nVirtual Account\nTransfer Bank\nBRI Ceria\nBCA KlikPay\nMandiri Clickpay\nLinkAja\nBRImo\nJenius Pay\nCicilan/Kartu Kredit\nGerai\nJakOne Mobile\nCicilan tanpa kartu kredit\nKredivo\nIndodana\nHome Credit\nCOD (cash on delivery)\n"
+                  ]
             },
             {
                   "tag": "Mandiri VA",
