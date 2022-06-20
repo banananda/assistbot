@@ -7,8 +7,10 @@ from tensorflow import keras
 import random 
 import json
 import streamlit as st
+nltk.data.path.append('./nltk_data')
 nltk.download("punkt")
 nltk.download("wordnet")
+
 
 model = keras.models.load_model("./chatbot_model")
 #model = keras.models.load_model(r"C:\Users\renan\OneDrive - Bina Nusantara\Documents\Semester 4\Natural Language Processing\stoopid-chatbot\chatbot_model")
