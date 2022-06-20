@@ -8,8 +8,8 @@ import random
 import json
 import streamlit as st
 nltk.data.path.append('./nltk_data')
-nltk.download("punkt")
-nltk.download("wordnet")
+# nltk.download("punkt")
+# nltk.download("wordnet")
 
 
 model = keras.models.load_model("./chatbot_model")
