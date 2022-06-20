@@ -1,5 +1,3 @@
-import streamlit as st
-
 import json
 import string
 import random 
@@ -13,10 +11,8 @@ from tensorflow.keras.layers import Dense, Dropout
 nltk.download("punkt")
 nltk.download("wordnet")
 
-f = open(r"C:\Users\renan\OneDrive - Bina Nusantara\Documents\Semester 4\Natural Language Processing\stoopid-chatbot\datasets\Intent.json")
+f = open("./datasets/Intent.json")
 data = json.load(f)
-
-# print(data)
 
 #def lemmatize():
 # initializing lemmatizer to get stem of words
@@ -46,14 +42,6 @@ words = [lemmatizer.lemmatize(word.lower()) for word in words if word not in str
 words = sorted(set(words))
 classes = sorted(set(classes))
 
-# print(words)
-# print(classes)
-# print(doc_X)
-# print(doc_y)
-
-# print(len(classes))
-
-#def split_data():
 # list for training data
 training = []
 out_empty = [0] * len(classes)
@@ -76,7 +64,6 @@ training = np.array(training, dtype=object)
 train_X = np.array(list(training[:, 0]))
 train_y = np.array(list(training[:, 1]))
 
-#def train_model():
 # defining some parameters
 input_shape = (len(train_X[0]),)
 output_shape = len(train_y[0])
@@ -95,48 +82,4 @@ model.compile(loss='categorical_crossentropy',
 print(model.summary())
 model.fit(x=train_X, y=train_y, epochs=200, verbose=1)
 
-def clean_text(text): 
-  tokens = nltk.word_tokenize(text)
-  tokens = [lemmatizer.lemmatize(word) for word in tokens]
-  return tokens
-
-def bag_of_words(text, vocab): 
-  tokens = clean_text(text)
-  bow = [0] * len(vocab)
-  for w in tokens: 
-    for idx, word in enumerate(vocab):
-      if word == w: 
-        bow[idx] = 1
-  return np.array(bow)
-
-def pred_class(text, vocab, labels): 
-  bow = bag_of_words(text, vocab)
-  result = model.predict(np.array([bow]))[0]
-  thresh = 0.2
-  y_pred = [[idx, res] for idx, res in enumerate(result) if res > thresh]
-
-  y_pred.sort(key=lambda x: x[1], reverse=True)
-  return_list = []
-  for r in y_pred:
-    return_list.append(labels[r[0]])
-  return return_list
-
-def get_response(intents_list, intents_json): 
-  tag = intents_list[0]
-  list_of_intents = intents_json["intents"]
-  for i in list_of_intents: 
-    if i["tag"] == tag:
-      result = random.choice(i["responses"])
-      break
-  return result
-
-# running the chatbot
-isRun = True
-while (isRun):
-    message = input("")
-    if(message == "stop"):
-        isRun = False
-    else:
-        intents = pred_class(message, words, classes)
-        result = get_response(intents, data)
-        st.write(result)
+model.save('chatbot_model')

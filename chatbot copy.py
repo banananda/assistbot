@@ -1,5 +1,3 @@
-import streamlit as st
-
 import json
 import string
 import random 
@@ -139,4 +137,4 @@ while (isRun):
     else:
         intents = pred_class(message, words, classes)
         result = get_response(intents, data)
-        st.write(result)
+        print(result)
