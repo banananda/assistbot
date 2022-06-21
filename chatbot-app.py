@@ -1,6 +1,8 @@
 import nltk
 import string
 from nltk.stem import WordNetLemmatizer 
+from nltk.corpus import wordnet
+from nltk.tokenize import punkt
 import numpy as np
 import tensorflow as tf 
 from tensorflow import keras
@@ -8,8 +10,8 @@ import random
 import json
 import streamlit as st
 # nltk.data.path.append('./nltk_data')
-nltk.download("punkt")
-nltk.download("wordnet")
+#nltk.download("punkt")
+#nltk.download("wordnet")
 
 
 model = keras.models.load_model("./chatbot_model")
