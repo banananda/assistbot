@@ -7,7 +7,7 @@ from tensorflow import keras
 import random 
 import json
 import streamlit as st
-nltk.data.path.append('./nltk_data')
+# nltk.data.path.append('./nltk_data')
 # nltk.download("punkt")
 # nltk.download("wordnet")
 
