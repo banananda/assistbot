@@ -7,16 +7,20 @@ from tensorflow import keras
 import random 
 import json
 import streamlit as st
-# nltk.data.path.append('./nltk_data')
-# nltk.download("punkt")
-# nltk.download("wordnet")
 
+
+@st.cache
+def nltk_init():
+  nltk.download("punkt")
+  nltk.download("wordnet")
+
+nltk_init()
 
 model = keras.models.load_model("./chatbot_model")
 #model = keras.models.load_model(r"C:\Users\renan\OneDrive - Bina Nusantara\Documents\Semester 4\Natural Language Processing\stoopid-chatbot\chatbot_model")
 
-#f = open(r"C:\Users\renan\OneDrive - Bina Nusantara\Documents\Semester 4\Natural Language Processing\stoopid-chatbot\datasets\Intent.json")
 f = open("./datasets/Intent.json")
+#f = open(r"C:\Users\renan\OneDrive - Bina Nusantara\Documents\Semester 4\Natural Language Processing\stoopid-chatbot\datasets\Intent.json")
 data = json.load(f)
 
 lemmatizer = WordNetLemmatizer()
@@ -81,24 +85,12 @@ def get_response(intents_list, intents_json):
       break
   return result
 
-# running the chatbot
-# isRun = True
-# while (isRun):
-#     message = st.text_input("Input query")
-#     if(message == "stop"):
-#         isRun = False
-#     else:
-#         intents = pred_class(message, words, classes)
-#         result = get_response(intents, data)
-#         print(result)
-
 st.write('''
-
-# Chatbot
+# Botbot
+###### Made with love 💖
 ***
-
 ''')
-message = st.text_input("Input query")
+message = st.text_input("Talk to me")
 
 if(message == "stop"):
     isRun = False
