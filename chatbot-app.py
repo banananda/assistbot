@@ -12,6 +12,7 @@ import streamlit as st
 
 nltk.download("punkt")
 nltk.download("wordnet")
+nltk.download('omw-1.4')
 
 model = keras.models.load_model("./chatbot_model")
 #model = keras.models.load_model(r"C:\Users\renan\OneDrive - Bina Nusantara\Documents\Semester 4\Natural Language Processing\stoopid-chatbot\chatbot_model")
