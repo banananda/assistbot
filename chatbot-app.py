@@ -17,10 +17,8 @@ def nltk_init():
 nltk_init()
 
 model = keras.models.load_model("./chatbot_model")
-#model = keras.models.load_model(r"C:\Users\renan\OneDrive - Bina Nusantara\Documents\Semester 4\Natural Language Processing\stoopid-chatbot\chatbot_model")
 
 f = open("./datasets/Intent.json")
-#f = open(r"C:\Users\renan\OneDrive - Bina Nusantara\Documents\Semester 4\Natural Language Processing\stoopid-chatbot\datasets\Intent.json")
 data = json.load(f)
 
 lemmatizer = WordNetLemmatizer()
@@ -86,7 +84,7 @@ def get_response(intents_list, intents_json):
   return result
 
 st.write('''
-# Botbot
+# AssistBot
 ###### Made with love 💖
 ***
 ''')
@@ -97,4 +95,4 @@ if(message == "stop"):
 else:
     intents = pred_class(message, words, classes)
     result = get_response(intents, data)
-    st.write("\n\nBotbot: " + result)
+    st.write("\nAssistBot: " + result)
