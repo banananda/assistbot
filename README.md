@@ -1,5 +1,5 @@
 # AssistBot || Final Project Natural Language Processing
-Try [here](https://yuk-belajar.herokuapp.com/](https://share.streamlit.io/banananda/assistbot/dev-streamlit/chatbot-app.py).
+Try [here](https://share.streamlit.io/banananda/assistbot/dev-streamlit/chatbot-app.py).
 
 ### Anggota:
 - Edbert Hansel - 2401954363
