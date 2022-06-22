@@ -14,7 +14,6 @@ nltk.download("wordnet")
 f = open("./datasets/Intent.json")
 data = json.load(f)
 
-#def lemmatize():
 # initializing lemmatizer to get stem of words
 lemmatizer = WordNetLemmatizer()
 # Each list to create
